@@ -1,13 +1,38 @@
 {
   "name": "strapi-plugin-import-export-entries",
-  "version": "1.23.1",
+  "version": "1.23.2",
   "description": "Import/Export data from and to your database in just few clicks.",
-  "strapi": {
-    "name": "import-export-entries",
-    "description": "Import/Export data from and to your database in just few clicks.",
-    "kind": "plugin",
-    "displayName": "Import Export Entries"
+  "keywords": [
+    "strapi",
+    "plugin",
+    "import",
+    "data",
+    "export",
+    "content"
+  ],
+  "homepage": "https://github.com/beyowi/strapi-plugin-import-export-entries#readme",
+  "bugs": {
+    "url": "https://github.com/beyowi/strapi-plugin-import-export-entries/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beyowi/strapi-plugin-import-export-entries.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Baboo",
+    "url": "https://github.com/Baboo7"
+  },
+  "maintainers": [
+    {
+      "name": "Baboo",
+      "url": "https://github.com/Baboo7"
+    },
+    {
+      "name": "Beyowi",
+      "url": "https://github.com/Beyowi"
+    }
+  ],
   "files": [
     "strapi-admin.js",
     "strapi-server.js",
@@ -22,13 +47,13 @@
     "dev": "nodemon --exec yarn build",
     "lint:check": "eslint ./src ./admin && yarn prettier --check ./src ./admin",
     "lint:fix": "eslint ./src ./admin --fix && yarn prettier --write ./src ./admin",
-    "test": "jest --forceExit --detectOpenHandles --runInBand",
-    "test:watch": "jest --forceExit --detectOpenHandles --runInBand --watch",
     "prepublishOnly": "yarn build:clean && yarn build",
     "release": "standard-version",
-    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
-    "release:major": "standard-version --release-as major"
+    "release:patch": "standard-version --release-as patch",
+    "test": "jest --forceExit --detectOpenHandles --runInBand",
+    "test:watch": "jest --forceExit --detectOpenHandles --runInBand --watch"
   },
   "dependencies": {
     "@monaco-editor/react": "4.4.5",
@@ -69,37 +94,14 @@
   "peerDependencies": {
     "@strapi/strapi": "^4.10.5"
   },
-  "author": {
-    "name": "Baboo",
-    "url": "https://github.com/Baboo7"
-  },
-  "maintainers": [
-    {
-      "name": "Baboo",
-      "url": "https://github.com/Baboo7"
-    }
-  ],
   "engines": {
     "node": ">=14.19.1 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "keywords": [
-    "strapi",
-    "plugin",
-    "strapi",
-    "import",
-    "data",
-    "export",
-    "data",
-    "content"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Baboo7/strapi-plugin-import-export-entries.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Baboo7/strapi-plugin-import-export-entries/issues"
-  },
-  "homepage": "https://github.com/Baboo7/strapi-plugin-import-export-entries#readme",
-  "license": "MIT"
+  "strapi": {
+    "name": "import-export-entries",
+    "description": "Import/Export data from and to your database in just few clicks.",
+    "kind": "plugin",
+    "displayName": "Import Export Entries"
+  }
 }
